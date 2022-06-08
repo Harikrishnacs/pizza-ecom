@@ -239,3 +239,17 @@ select:focus {
   box-shadow: none!important;
   border-color: none !important;
 }
+
+
+
+.content-board{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.card{
+  min-width: 40%;
+  margin: 0 10px;
+}

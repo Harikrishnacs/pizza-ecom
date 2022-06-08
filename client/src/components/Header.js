@@ -5,7 +5,7 @@ import { Navbar, Nav, Container, NavDropdown, Image } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../actions/userActions'
 import SearchBox from './SearchBox'
-import HeroSection from './HeroSection'
+// import HeroSection from './HeroSection'
 import logo from '../assets/logo/logo.png'
 import userProfile from '../assets/icons/user-profile.svg'
 import shoppingCart from '../assets/icons/shopping-cart.svg'
@@ -79,6 +79,9 @@ const Header = () => {
 
               {userInfo && userInfo.isAdmin && (
                 <NavDropdown title='Admin' id='adminMenu'>
+                   <LinkContainer to='/admin/dashBoard'>
+                    <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                  </LinkContainer>
                   <LinkContainer to='/admin/userlist'>
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
