@@ -80,7 +80,7 @@ const CartScreen = ({ match, location, history }) => {
                         </Link>
                       </Col>
                       <Col md={2}>
-                        <h4>₹{item.price}</h4>
+                        <h4>${item.price}</h4>
                       </Col>
                       <Col md={2}>
                         <Form.Control

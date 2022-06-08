@@ -37,7 +37,7 @@ const Product = ({ product }) => {
         </Card.Text>
 
         <Card.Text as='h3' className={styles.product_price}>
-        ₹{product.price}
+        ${product.price}
         </Card.Text>
 
         <Link to={`/product/${product._id}`}>

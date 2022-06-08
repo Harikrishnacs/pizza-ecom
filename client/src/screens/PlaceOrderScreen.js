@@ -29,7 +29,7 @@ const PlaceOrderScreen = ({ history }) => {
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   )
 
-  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100)
+  cart.shippingPrice = addDecimals(cart.itemsPrice >  100 ? 1 : 2)
 
   cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)))
 
@@ -125,7 +125,7 @@ const PlaceOrderScreen = ({ history }) => {
                           </Col>
 
                           <Col md={4}>
-                            {item.qty} x ₹{item.price} = ₹
+                            {item.qty} x ${item.price} = $
                             {item.qty * item.price}
                           </Col>
                         </Row>
@@ -146,28 +146,28 @@ const PlaceOrderScreen = ({ history }) => {
                 <ListGroup.Item>
                   <Row>
                     <Col>Items</Col>
-                    <Col>₹{cart.itemsPrice}</Col>
+                    <Col>${cart.itemsPrice}</Col>
                   </Row>
                 </ListGroup.Item>
 
                 <ListGroup.Item>
                   <Row>
                     <Col>Shipping</Col>
-                    <Col>₹{cart.shippingPrice}</Col>
+                    <Col>${cart.shippingPrice}</Col>
                   </Row>
                 </ListGroup.Item>
 
                 <ListGroup.Item>
                   <Row>
                     <Col>Tax</Col>
-                    <Col>₹{cart.taxPrice}</Col>
+                    <Col>${cart.taxPrice}</Col>
                   </Row>
                 </ListGroup.Item>
 
                 <ListGroup.Item>
                   <Row>
                     <Col>Total</Col>
-                    <Col>₹{cart.totalPrice}</Col>
+                    <Col>${cart.totalPrice}</Col>
                   </Row>
                 </ListGroup.Item>
 

@@ -156,7 +156,7 @@ const ProductScreen = ({ match, history }) => {
                       fontSize: '23px',
                     }}
                   >
-                    Price: ₹{product.price}
+                    Price: ${product.price}
                   </ListGroup.Item>
                 </motion.div>
                 <motion.div variants={fadeInUp}>
@@ -175,7 +175,7 @@ const ProductScreen = ({ match, history }) => {
                       <Row>
                         <Col>Price:</Col>
                         <Col>
-                          <strong>₹{product.price}</strong>
+                          <strong>${product.price}</strong>
                         </Col>
                       </Row>
                     </ListGroup.Item>
